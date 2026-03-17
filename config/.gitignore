@@ -1,2 +1,4 @@
-acme.json
+.htpasswd*
+acme.json*
+rules.yaml.*
 users
