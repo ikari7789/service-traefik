@@ -3,51 +3,51 @@ http:
     dsm:
       entryPoints:
         - websecure
-      rule: "Host(`{{env "DSM_EXTERNAL_DOMAIN"}}`)"
+      rule: "Host(`{{ env "DSM_EXTERNAL_DOMAIN" }}`)"
       service: dsm
     dsm-old:
       entryPoints:
         - websecure
-      rule: "Host(`{{env "DSM_OLD_EXTERNAL_DOMAIN"}}`)"
+      rule: "Host(`{{ env "DSM_OLD_EXTERNAL_DOMAIN" }}`)"
       service: dsm-old
     homeassistant:
       entryPoints:
         - websecure
-      rule: "Host(`{{env "HOMEASSITANT_EXTERNAL_DOMAIN"}}`)"
+      rule: "Host(`{{ env "HOMEASSITANT_EXTERNAL_DOMAIN" }}`)"
       service: homeassistant
     ollama:
       entryPoints:
         - websecure
-      rule: "Host(`{{env "OLLAMA_EXTERNAL_DOMAIN"}}`)"
+      rule: "Host(`{{ env "OLLAMA_EXTERNAL_DOMAIN }}`)"
       service: ollama
     router:
       entryPoints:
         - websecure
-      rule: "Host(`{{env "ROUTER_EXTERNAL_DOMAIN"}}`)"
+      rule: "Host(`{{ env "ROUTER_EXTERNAL_DOMAIN" }}`)"
       service: router
   services:
     dsm:
       loadBalancer:
         passHostHeader: true
         servers:
-        - url: "{{env "DSM_URL"}}"
+        - url: "{{ env "DSM_URL" }}"
     dsm-old:
       loadBalancer:
         passHostHeader: true
         servers:
-        - url: "{{env "DSM_OLD_URL"}}"
+        - url: "{{ env "DSM_OLD_URL" }}"
     homeassistant:
       loadBalancer:
         passHostHeader: true
         servers:
-        - url: "{{env "HOMEASSISTANT_URL"}}"
+        - url: "{{ env "HOMEASSISTANT_URL" }}"
     ollama:
       loadBalancer:
         passHostHeader: true
         servers:
-        - url: "{{env "OLLAMA_EXTERNAL_URL"}}"
+        - url: "{{ env "OLLAMA_EXTERNAL_URL" }}"
     router:
       loadBalancer:
         passHostHeader: true
         servers:
-        - url: "{{env "ROUTER_URL"}}"
+        - url: "{{ env "ROUTER_URL" }}"
