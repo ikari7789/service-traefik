@@ -33,10 +33,10 @@ services:
 
   traefik:
     command:
-      - "--accesslog.filePath=/var/log/traefik/access.log"
-      - "--accesslog.format=json"
       - "--accesslog.fields.defaultmode=keep"
       - "--accesslog.fields.headers.defaultmode=keep"
+      - "--accesslog.filePath=/var/log/traefik/access.log"
+      - "--accesslog.format=json"
       - "--api.dashboard=true"
       - "--certificatesresolvers.myresolver.acme.dnschallenge.propagation.disablechecks=true"
       - "--certificatesresolvers.myresolver.acme.dnschallenge.provider=cloudflare"
