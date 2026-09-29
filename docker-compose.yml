@@ -71,7 +71,14 @@ services:
       CLOUDFLARE_API_KEY: /run/secrets/cloudflare_api_key
       CLOUDFLARE_EMAIL: /run/secrets/cloudflare_email
       DSM_EXTERNAL_DOMAIN:
-      DSM_INTERNAL_URL:
+      DSM_OLD_EXTERNAL_DOMAIN:
+      DSM_OLD_URL:
+      DSM_URL:
+      HOMEASSISTANT_EXTERNAL_DOMAIN:
+      HOMEASSISTANT_URL:
+      ROUTER_EXTERNAL_DOMAIN:
+      ROUTER_URL:
+      TRAEFIK_EXTERNAL_DOMAIN:
     image: traefik:latest
     labels:
       - "traefik.enable=true"
