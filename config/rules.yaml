@@ -15,6 +15,11 @@ http:
         - websecure
       rule: "Host(`{{env "HOMEASSITANT_EXTERNAL_DOMAIN"}}`)"
       service: homeassistant
+    ollama:
+      entryPoints:
+        - websecure
+      rule: "Host(`{{env "OLLAMA_EXTERNAL_DOMAIN"}}`)"
+      service: ollama
     router:
       entryPoints:
         - websecure
@@ -36,6 +41,11 @@ http:
         passHostHeader: true
         servers:
         - url: "{{env "HOMEASSISTANT_URL"}}"
+    ollama:
+      loadBalancer:
+        passHostHeader: true
+        servers:
+        - url: "{{env "OLLAMA_EXTERNAL_URL"}}"
     router:
       loadBalancer:
         passHostHeader: true
