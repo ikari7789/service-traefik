@@ -13,7 +13,7 @@ http:
     homeassistant:
       entryPoints:
         - websecure
-      rule: "Host(`{{ env "HOMEASSITANT_EXTERNAL_DOMAIN" }}`)"
+      rule: "Host(`{{ env "HOMEASSISTANT_EXTERNAL_DOMAIN" }}`)"
       service: homeassistant
     ollama:
       entryPoints:
