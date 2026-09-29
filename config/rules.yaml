@@ -18,7 +18,7 @@ http:
     ollama:
       entryPoints:
         - websecure
-      rule: "Host(`{{ env "OLLAMA_EXTERNAL_DOMAIN }}`)"
+      rule: "Host(`{{ env "OLLAMA_EXTERNAL_DOMAIN" }}`)"
       service: ollama
     router:
       entryPoints:
