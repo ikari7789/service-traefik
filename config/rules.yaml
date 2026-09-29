@@ -45,7 +45,7 @@ http:
       loadBalancer:
         passHostHeader: true
         servers:
-        - url: "{{ env "OLLAMA_EXTERNAL_URL" }}"
+        - url: "{{ env "OLLAMA_URL" }}"
     router:
       loadBalancer:
         passHostHeader: true
