@@ -68,8 +68,8 @@ services:
       # - "--tracing.jaeger.localagenthostport=${JAEGER_LOCAL_AGENT_HOST_PORT}"
       # - "--tracing.jaeger.samplingserverurl=${JAEGER_SAMPLING_SERVER_URL}"
     environment:
-      CLOUDFLARE_API_KEY: /run/secrets/cloudflare_api_key
-      CLOUDFLARE_EMAIL: /run/secrets/cloudflare_email
+      CLOUDFLARE_API_KEY_FILE: /run/secrets/cloudflare_api_key
+      CLOUDFLARE_EMAIL_FILE: /run/secrets/cloudflare_email
       DSM_EXTERNAL_DOMAIN:
       DSM_OLD_EXTERNAL_DOMAIN:
       DSM_OLD_URL:
